@@ -1,0 +1,19 @@
+package com.studentenquiryapp.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Data;
+
+@Entity
+@Table(name="AIT_ENQURIRY_STATUS")
+@Data
+public class EnquiryStatus {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY) 
+	private Integer statusId;
+	private String statusName;
+}
